@@ -1,22 +1,22 @@
 package com.nzlouis.users.models;
 
-
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 /**
  * @author Louis
- *
  */
 @Entity
 @Getter
 @Setter
 @Schema(description = "A user object")
+@Table(name = "app_user")
 public class User {
 
     @Schema(description = "The email of the user.", allowableValues = "some.one@email.com",  required = true)

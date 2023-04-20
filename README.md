@@ -1,4 +1,4 @@
-# User Service
+# Games API Service
 A service for finding all users, creating, retrieving, updating, and deleting users.
 
 swagger-ui url : http://localhost:8080/doc.html

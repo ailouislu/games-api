@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS user;
-create table user(
+DROP TABLE IF EXISTS app_user;
+create table app_user(
   email      varchar(50),
   password        varchar(50),
   first_Name        varchar(50),
