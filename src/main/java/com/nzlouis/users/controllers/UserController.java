@@ -1,20 +1,16 @@
 package com.nzlouis.users.controllers;
 
-import java.util.List;
-
-
 import com.nzlouis.users.models.User;
-import com.nzlouis.utils.response.R;
 import com.nzlouis.users.repositories.IUserRepository;
+import com.nzlouis.utils.response.R;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.tags.Tag;
+import java.util.List;
 
 /**
  * @author Louis

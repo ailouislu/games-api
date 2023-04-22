@@ -38,4 +38,11 @@ public class OpenApiConfig {
 		return GroupedOpenApi.builder().group("Users").packagesToScan(packagesToscan)
 				.build();
 	}
+	// Group configuration: Games
+	@Bean
+	public GroupedOpenApi gamesOpenApi() {
+		String[] packagesToscan = {"com.nzlouis.games"};
+		return GroupedOpenApi.builder().group("Genres").packagesToScan(packagesToscan)
+				.build();
+	}
 }
