@@ -1,5 +1,6 @@
 package com.nzlouis.games.models;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,19 +11,13 @@ import javax.persistence.*;
  * @author Louis
  */
 @Entity
-@Getter
-@Setter
-@Table(name = "Genres")
+@Data
 public class Genres {
     @Id
     private int id;
-    @Column(name = "name")
     private String name;
-    @Column(name = "slug")
     private String slug;
-    @Column(name = "games_count")
     private int gamesCount;
-    @Column(name = "image_background")
     private String imageBackground;
     public Genres() {
     }
