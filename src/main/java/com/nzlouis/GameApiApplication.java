@@ -6,10 +6,10 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 @SpringBootApplication
-public class GamesApiApplication {
+public class GameApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GamesApiApplication.class, args);
+		SpringApplication.run(GameApiApplication.class, args);
 	}
 
 }

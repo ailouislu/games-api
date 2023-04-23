@@ -34,15 +34,15 @@ public class OpenApiConfig {
 	// Group configuration: Users
 	@Bean
 	public GroupedOpenApi userOpenApi() {
-		String[] packagesToscan = {"com.nzlouis.users"};
-		return GroupedOpenApi.builder().group("Users").packagesToScan(packagesToscan)
+		String[] packagesToscan = {"com.nzlouis.user"};
+		return GroupedOpenApi.builder().group("User").packagesToScan(packagesToscan)
 				.build();
 	}
-	// Group configuration: Games
+	// Group configuration: Game
 	@Bean
 	public GroupedOpenApi gamesOpenApi() {
-		String[] packagesToscan = {"com.nzlouis.games"};
-		return GroupedOpenApi.builder().group("Genres").packagesToScan(packagesToscan)
+		String[] packagesToscan = {"com.nzlouis.game"};
+		return GroupedOpenApi.builder().group("Game").packagesToScan(packagesToscan)
 				.build();
 	}
 }

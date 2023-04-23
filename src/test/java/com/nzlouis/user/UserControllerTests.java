@@ -1,8 +1,8 @@
-package com.nzlouis.users.tests;
+package com.nzlouis.user;
 
-import com.nzlouis.GamesApiApplication;
-import com.nzlouis.users.models.User;
-import com.nzlouis.users.repositories.IUserRepository;
+import com.nzlouis.GameApiApplication;
+import com.nzlouis.user.model.User;
+import com.nzlouis.user.repository.IUserRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 
-@SpringBootTest(classes = GamesApiApplication.class)
+@SpringBootTest(classes = GameApiApplication.class)
 @RunWith(SpringRunner.class)
 public class UserControllerTests {
 

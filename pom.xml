@@ -9,10 +9,10 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.nzlouis</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>game</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Springdoc OpenApi3</description>
+	<name>game</name>
+	<description>Game platforms</description>
 
 	<properties>
 		<java.version>17</java.version>

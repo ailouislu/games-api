@@ -1,7 +1,7 @@
-package com.nzlouis.games.controllers;
+package com.nzlouis.game.controller;
 
-import com.nzlouis.games.models.Genres;
-import com.nzlouis.games.repositories.IGenresRepository;
+import com.nzlouis.game.model.Genre;
+import com.nzlouis.game.repository.IGenreRepository;
 import com.nzlouis.utils.response.R;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -18,71 +18,71 @@ import java.util.List;
  *
  */
 @RestController
-@RequestMapping("/api/genres")
-@Tag(name = "default")
+@RequestMapping("/api/genre")
+@Tag(name = "Genre")
 @CrossOrigin("*")
-public class GenresController {
-	private static final Logger logger= LoggerFactory.getLogger(GenresController.class);
+public class GenreController {
+	private static final Logger logger= LoggerFactory.getLogger(GenreController.class);
 
 	@Autowired
-	IGenresRepository genresRepository;
+	IGenreRepository genresRepository;
 
 	@Operation(summary ="Creates a new genres.")
 	@PostMapping
-	public R<Genres> addGenres(@RequestBody Genres genres) {
+	public R<Genre> addGenres(@RequestBody Genre genres) {
 		try {
 			genresRepository.save(genres);
 		} catch (Exception e) {
 			logger.error("Creates a new genres fails:" + e.getMessage());
 		}
 
-		return new R<Genres>().success();
+		return new R<Genre>().success();
 	}
 
 	@Operation(summary ="Update an existing genres.")
 	@PutMapping("")
-	public R<Genres> updateGenres(@Parameter(description="Update an existing genres.")@RequestBody Genres genres) {
+	public R<Genre> updateGenres(@Parameter(description="Update an existing genres.")@RequestBody Genre genres) {
 		try {
 			genresRepository.save(genres);
 		} catch (Exception e) {
 			logger.error("Update an existing genres fails:" + e.getMessage());
 		}
 
-		return new R<Genres>().success();
+		return new R<Genre>().success();
 	}
 
 	@Operation(summary ="Retrieve an existing genres.")
 	@GetMapping("/{id}")
-	public R<Genres> findGenresById(@Parameter(description="A genres's id")@PathVariable String id) {
-		Genres genres = null;
+	public R<Genre> findGenresById(@Parameter(description="A genres's id")@PathVariable String id) {
+		Genre genres = null;
 		try {
-			genres = genresRepository.findById(Integer.valueOf(id)).orElse(new Genres());
+			genres = genresRepository.findById(Integer.valueOf(id)).orElse(new Genre());
 		} catch (Exception e) {
 			logger.error("Retrieve an existing genres fails:" + e.getMessage());
 		}
 
-		return new R<Genres>().success().data(genres);
+		return new R<Genre>().success().data(genres);
 	}
 
 
 	@Operation(summary ="Delete an existing genres.")
 	@DeleteMapping(value = "/{id}")
-	public R<Genres> deleteGenres(@Parameter(description="Delete an existing genres.")@RequestParam(value = "id") final String id) {
+	public R<Genre> deleteGenres(@Parameter(description="Delete an existing genres.")@RequestParam(value = "id") final String id) {
 		try {
 			genresRepository.deleteById(Integer.valueOf(id));
 		} catch (Exception e) {
 			logger.error("Delete an existing genres fails:" + e.getMessage());
 		}
 
-		return new R<Genres>().success();
+		return new R<Genre>().success();
 	}
 
 
 	@Operation(summary ="Find the genres list")
 	@GetMapping("")
 	@ResponseBody
-	public R<List<Genres>> findGenres() {
-		List<Genres> genresList = null;
+	public R<List<Genre>> findGenres() {
+		List<Genre> genresList = null;
 		try {
 			genresList = genresRepository.findAll();
 
@@ -90,7 +90,7 @@ public class GenresController {
 			logger.error("Find the genres list fails:" + e.getMessage());
 		}
 
-		return new R<List<Genres>>().success().data(genresList);
+		return new R<List<Genre>>().success().data(genresList);
 	}
 	
 }

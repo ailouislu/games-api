@@ -1,13 +1,16 @@
-package com.nzlouis.gamesapi;
+package com.nzlouis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GamesApiApplicationTests {
+class GameApiApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+
+	@Test
+	public void contextLoads() {
+
+	}
+
 
 }

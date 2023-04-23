@@ -1,8 +1,6 @@
-package com.nzlouis.games.models;
+package com.nzlouis.game.model;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -12,16 +10,16 @@ import javax.persistence.*;
  */
 @Entity
 @Data
-public class Genres {
+public class Genre {
     @Id
     private int id;
     private String name;
     private String slug;
     private int gamesCount;
     private String imageBackground;
-    public Genres() {
+    public Genre() {
     }
-    public Genres(int id, String name, String slug, int gamesCount, String imageBackground) {
+    public Genre(int id, String name, String slug, int gamesCount, String imageBackground) {
         super();
         this.id = id;
         this.name = name;

@@ -1,7 +1,7 @@
-package com.nzlouis.users.controllers;
+package com.nzlouis.user.controller;
 
-import com.nzlouis.users.models.User;
-import com.nzlouis.users.repositories.IUserRepository;
+import com.nzlouis.user.model.User;
+import com.nzlouis.user.repository.IUserRepository;
 import com.nzlouis.utils.response.R;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/users")
-@Tag(name = "default")
+@Tag(name = "User")
 @CrossOrigin("*")
 public class UserController {
 	private static final Logger logger= LoggerFactory.getLogger(UserController.class);

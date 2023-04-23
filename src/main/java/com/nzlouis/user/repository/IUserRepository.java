@@ -1,6 +1,6 @@
-package com.nzlouis.users.repositories;
+package com.nzlouis.user.repository;
 
-import com.nzlouis.users.models.User;
+import com.nzlouis.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /***
