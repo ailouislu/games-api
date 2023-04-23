@@ -40,9 +40,16 @@ public class OpenApiConfig {
 	}
 	// Group configuration: Game
 	@Bean
-	public GroupedOpenApi gamesOpenApi() {
+	public GroupedOpenApi gameOpenApi() {
 		String[] packagesToscan = {"com.nzlouis.game"};
 		return GroupedOpenApi.builder().group("Game").packagesToScan(packagesToscan)
+				.build();
+	}
+	// Group configuration: Platform
+	@Bean
+	public GroupedOpenApi platformOpenApi() {
+		String[] packagesToscan = {"com.nzlouis.platform"};
+		return GroupedOpenApi.builder().group("Platform").packagesToScan(packagesToscan)
 				.build();
 	}
 }
