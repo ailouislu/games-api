@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/game")
-@Tag(name = "Game")
+@RequestMapping("/api/games")
+@Tag(name = "Games")
 @CrossOrigin("*")
 public class GameController {
     private static final Logger logger= LoggerFactory.getLogger(GameController.class);

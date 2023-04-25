@@ -18,8 +18,8 @@ import java.util.List;
  *
  */
 @RestController
-@RequestMapping("/api/genre")
-@Tag(name = "Genre")
+@RequestMapping("/api/genres")
+@Tag(name = "Genres")
 @CrossOrigin("*")
 public class GenreController {
 	private static final Logger logger= LoggerFactory.getLogger(GenreController.class);
