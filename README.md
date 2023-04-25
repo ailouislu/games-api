@@ -1,10 +1,12 @@
 # Games API Service
-A service for finding all users, creating, retrieving, updating, and deleting users.
+An API service for finding all games, creating, retrieving, updating, and deleting Games and platforms.
 
-swagger-ui url : http://localhost:8080/doc.html
+-Games API URL : https://gamesapi.nzlouis.com//doc.html
+
+-Local Swagger UI URL : http://localhost:8087/doc.html
 
 Use of technology: Springboot2.3 + Springdoc-openapi 3 + JPA + H2 + Junit4
 
-"# openapi" 
+"# games-api" 
 
-![](src/main/resources/openapi.gif)
+![](src/main/resources/Games.jpg)
